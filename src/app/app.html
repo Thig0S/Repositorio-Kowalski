@@ -1,1 +1,21 @@
-<h1>Hello Kowalski The Greatest</h1>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Kowalski</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <span class="ms-auto"></span>
+      <div class="navbar-nav">
+        @for (item of itens; track $index) {
+            <a class="nav-link active" aria-current="page" [href]="item.url">
+            <i class="{{item.icone}}"></i>{{item.titulo}}</a>
+        }
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main>
+    <h1>Hello goat</h1>
+</main>
