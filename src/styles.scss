@@ -42,3 +42,7 @@ section {
   border-radius: 30% 70% 75% 25% / 25% 30% 70% 75%;
   overflow: hidden; //deixa a imagem contida dentro da div pai
 }
+
+.flex-content {
+  min-width: 0;
+}

@@ -1,8 +1,8 @@
 <section id="projetos" class="bg-light text-dark">
   <article class="container d-flex flex-column my-5">
-    <h2 class="display-5 fw-medium fst-italic text-center">Projects</h2>
+    <h2 class="display-5 fw-medium fst-italic text-center text-secondary">Projects</h2>
 
-    <p class="fs-5 mt-5 text-center">
+    <p class="fs-5 mt-5 text-center text-secondary">
       Nesta seção, apresento projetos que refletem minha experiência e minhas habilidades como
       desenvolvedor. Cada item reúne uma descrição detalhada, as tecnologias utilizadas e os links
       para visualizar a imagem do projeto ou acessar seu código-fonte.
@@ -11,20 +11,23 @@
     <ol>
       @for (item of projetos; track item.titulo; let indice = $index) {
         <li class="d-flex align-items-start gap-4 border-bottom border-dark-subtle py-4">
-          <span class="fs-1 fw-medium fst-italic">{{
+          <span class="fs-1 fw-medium fst-italic text-secondary">{{
             (indice + 1).toString().padStart(2, '0')
           }}</span>
-          <article class="d-flex flex-column gap-3 flex-grow-1">
-            <h3 class="fs-2 fw-medium fst-italic">{{ item.titulo }}</h3>
+          <article class="d-flex flex-column flex-grow-1 gap-3 flex-content">
+            <h3 class="fs-2 fw-medium fst-italic text-secondary">
+              {{ item.titulo }}
+            </h3>
 
-            <p class="fs-5 mb-0">{{ item.descricao }}</p>
+            <p class="fs-5 mb-0 text-secondary">{{ item.descricao }}</p>
 
             <div class="d-flex flex-warp align-items-start gap-3 mt-3">
-              <div class="d-flex flex-warp gap-2">
+              <div class="d-flex flex-wrap gap-2 flex-grow-1 flex-content">
                 @for (itemTecnologia of item.tecnologias; track $index) {
-                  <span class="badge rounded-pill border border-light-subtle text-dark px-3 py-2">{{
-                    itemTecnologia
-                  }}</span>
+                  <span
+                    class="badge rounded-pill border border-dark-subtle text-secondary px-3 py-2 fs-6"
+                    >{{ itemTecnologia }}</span
+                  >
                 }
               </div>
 
@@ -38,14 +41,14 @@
                     Abrir imagem
                   </button>
                 }
-                <a
-                  [href]="item.urlRepositorio"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="btn btn-outline-dark rounded-pill"
-                  ><i class="bi bi-github me-2"></i>Repository</a
-                >
               </div>
+              <a
+                [href]="item.urlRepositorio"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-outline-dark rounded-pill"
+                ><i class="bi bi-github me-2"></i>Repository</a
+              >
             </div>
           </article>
         </li>
