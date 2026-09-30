@@ -3,42 +3,42 @@
 $fonte-padrao: Georgia, 'Times New Roman', serif;
 
 $primaria: #161316;
-$secundaria: #F5F6F4;
-$laranja: #B75F29;
-$marrom: #75412B;
+$secundaria: #f5f6f4;
+$laranja: #b75f29;
+$marrom: #75412b;
 $claro: #898989;
 
 @use 'bootstrap/scss/bootstrap' with (
-    $primary: $primaria,
-    $secondary: $secundaria,
-    $warning: $laranja,
-    $info: $marrom,
-    $light: $claro,
-    $font-family-base: $fonte-padrao,
-    $font-family-sans-serif: $fonte-padrao
+  $primary: $primaria,
+  $secondary: $secundaria,
+  $warning: $laranja,
+  $info: $marrom,
+  $light: $claro,
+  $font-family-base: $fonte-padrao,
+  $font-family-sans-serif: $fonte-padrao
 );
 
-@use 'bootstrap-icons'; 
+@use 'bootstrap-icons';
 
-nav{
-    color: $primaria;
+nav {
+  color: $primaria;
 }
 
-section{
-    display: flex;
-    min-height: 100vh;
+section {
+  display: flex;
+  min-height: 100vh;
 }
 
-.sobre-banner-text{
-    background: linear-gradient(90deg, $laranja, $marrom 90%);
-    background-clip: text;
-    color: transparent;
+.sobre-banner-text {
+  background: linear-gradient(90deg, $laranja, $marrom 90%);
+  background-clip: text;
+  color: transparent;
 }
 
-.sobre-banner-img{
-    background: linear-gradient(90deg, $primaria, $secundaria  90%);
-    height: 30rem;
-    width: 25rem;
-    border-radius: 30% 70% 75% 25% / 25% 30% 70% 75%;
-    overflow: hidden; //deixa a imagem contida dentro da div pai
+.sobre-banner-img {
+  background: linear-gradient(90deg, $primaria, $secundaria 90%);
+  height: 30rem;
+  width: 25rem;
+  border-radius: 30% 70% 75% 25% / 25% 30% 70% 75%;
+  overflow: hidden; //deixa a imagem contida dentro da div pai
 }
