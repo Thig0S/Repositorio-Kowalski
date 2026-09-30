@@ -11,14 +11,16 @@
     <ol>
       @for (item of projetos; track item.titulo; let indice = $index) {
         <li class="d-flex align-items-start gap-4 border-bottom border-dark-subtle py-4">
+          
           <span class="fs-1 fw-medium fst-italic text-secondary">{{
             (indice + 1).toString().padStart(2, '0')
           }}</span>
+          
           <article class="d-flex flex-column flex-grow-1 gap-3 flex-content">
             <h3 class="fs-2 fw-medium fst-italic text-secondary">
-              {{ item.titulo }}
+              {{ item.titulo }} <span class="fst-normal">{{ item.emoji }}</span>
             </h3>
-
+            
             <p class="fs-5 mb-0 text-secondary">{{ item.descricao }}</p>
 
             <div class="d-flex flex-warp align-items-start gap-3 mt-3">
