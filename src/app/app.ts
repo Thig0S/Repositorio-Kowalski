@@ -2,15 +2,13 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Navbar } from './components/navbar/navbar';
 import { Sobre } from './components/sobre/sobre';
-
-
+import { Habilidades } from './components/habilidades/habilidades';
 
 @Component({
-  imports: [Navbar, Sobre], //Esse cara é o @RenderBody
+  imports: [Navbar, Sobre, Habilidades], //Esse cara é o @RenderBody
   selector: 'app-root',
   templateUrl: './app.html',
 })
 export class App {
   //raiz /startup do projeto
-  
 }
