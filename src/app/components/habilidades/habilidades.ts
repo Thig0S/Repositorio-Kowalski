@@ -60,5 +60,10 @@ export class Habilidades {
       titulo: 'Cypress',
       descricao: 'Automação de testes de ponta a ponta para aplicações web.',
     },
+    {
+      imagem: 'https://skillicons.dev/icons?i=vscode&theme=dark',
+      titulo: 'VS CODE',
+      descricao: 'IDE utilizada para a produção das aplicações.',
+    },
   ];
 }
