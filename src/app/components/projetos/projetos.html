@@ -11,20 +11,19 @@
     <ol>
       @for (item of projetos; track item.titulo; let indice = $index) {
         <li class="d-flex align-items-start gap-4 border-bottom border-dark-subtle py-4">
-          
           <span class="fs-1 fw-medium fst-italic text-secondary">{{
             (indice + 1).toString().padStart(2, '0')
           }}</span>
-          
+
           <article class="d-flex flex-column flex-grow-1 gap-3 flex-content">
             <h3 class="fs-2 fw-medium fst-italic text-secondary">
               {{ item.titulo }} <span class="fst-normal">{{ item.emoji }}</span>
             </h3>
-            
+
             <p class="fs-5 mb-0 text-secondary">{{ item.descricao }}</p>
 
-            <div class="d-flex flex-warp align-items-start gap-3 mt-3">
-              <div class="d-flex flex-wrap gap-2 flex-grow-1 flex-content">
+            <div class="d-flex flex-warp align-items-start gap-3 mt-3 flex-column">
+              <div class="d-flex flex-wrap gap-2 flex-grow-1">
                 @for (itemTecnologia of item.tecnologias; track $index) {
                   <span
                     class="badge rounded-pill border border-dark-subtle text-secondary px-3 py-2 fs-6"
@@ -35,22 +34,60 @@
 
               <div class="d-flex flex-warp gap-2 ms-auto">
                 @if (item.urlImagem) {
+                  <!-- Button trigger modal -->
                   <button
                     type="button"
-                    class="btn btn-outline-dark rounded-pill d-inline-flex align-items-center"
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
                   >
                     <i class="bi bi-image me-2"></i>
-                    Abrir imagem
+                    Ver Giff
                   </button>
+
+                  <!-- Modal -->
+                  <div
+                    class="modal fade"
+                    id="exampleModal"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                          <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <div class="modal-body">
+                          <img
+                            src="/videos/Overview.gif"
+                            alt="Overview do projeto"
+                            class="img-fluid w-100"
+                          />
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                            Close
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 }
+                <a
+                  [href]="item.urlRepositorio"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-outline-dark rounded-pill"
+                  ><i class="bi bi-github me-2 ms-auto"></i>Repository</a
+                >
               </div>
-              <a
-                [href]="item.urlRepositorio"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn-outline-dark rounded-pill"
-                ><i class="bi bi-github me-2"></i>Repository</a
-              >
             </div>
           </article>
         </li>

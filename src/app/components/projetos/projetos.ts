@@ -17,6 +17,24 @@ interface Projeto {
 export class Projetos {
   public readonly projetos: Projeto[] = [
     {
+      titulo: 'Gadeias Courses ',
+      emoji: '🏫',
+      descricao:
+        'Gadeias Courses is a web application for managing an educational institution. It brings together student and tutor records, courses, lessons, class groups, categories, and student enrollments in one place.',
+      urlImagem: 'a',
+      urlRepositorio: 'https://github.com/Os-Gadeias/Gadeia-s-Cursos',
+      tecnologias: [
+        'AspNet MVC',
+        '.NET 10',
+        'Bootstrap',
+        'AutoMapper',
+        'FluentResults',
+        'Entity',
+        'Identity',
+      ],
+    },
+
+    {
       titulo: 'Online Certificate Generator',
       emoji: '📚',
       descricao:
@@ -32,23 +50,6 @@ export class Projetos {
         'RabbitMQ',
         'SQL Server',
         'JWT',
-      ],
-    },
-    {
-      titulo: 'Gadeias Courses ',
-      emoji: '🏫',
-      descricao:
-        'Gadeias Courses is a web application for managing an educational institution. It brings together student and tutor records, courses, lessons, class groups, categories, and student enrollments in one place.',
-      urlImagem: '',
-      urlRepositorio: 'https://github.com/Os-Gadeias/Gadeia-s-Cursos',
-      tecnologias: [
-        'AspNet MVC',
-        '.NET 10',
-        'Bootstrap',
-        'AutoMapper',
-        'FluentResults',
-        'Entity',
-        'Identity',
       ],
     },
   ];
