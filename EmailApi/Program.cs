@@ -1,3 +1,5 @@
+using EmailApi.API;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddOpenApi();
@@ -5,7 +7,8 @@ builder.Services.AddOpenApi();
 //add os controllers da API
 builder.Services.AddControllers();
 
-var app = builder.Build();
+builder.Services.AddDependenciaService();
+
 
 //CORS (Cross-Origin Resource Sharing). é onde registramos os servicos externos da aplicacao
 //No caso dessa aplicação C# ela vai acessar o Angular na porta 4200
@@ -20,6 +23,9 @@ builder.Services.AddCors(options =>
             .AllowAnyMethod(); //Permite que o Angular utilize qualquer método HTTP:
     });
 });
+
+var app = builder.Build();
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
