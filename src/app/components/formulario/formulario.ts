@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { EmailService } from '../../service/email';
+import { EmailService } from '../../service/servicoEmail';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 
