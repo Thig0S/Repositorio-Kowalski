@@ -1,5 +1,8 @@
-using FluentResults;
+using EmailApi.API.config;
+using MailKit.Net.Smtp;
 using MediatR;
+using Microsoft.Extensions.Options;
+using MimeKit;
 
 namespace EmailApi.API.Service;
 
@@ -7,17 +10,62 @@ public sealed record EnviarEmailCommand(
     string Nome,
     string Email,
     string Mensagem
-) : IRequest<Result>;
+) : IRequest;
 
-public class EnviarEmailCommandHandler : IRequestHandler<EnviarEmailCommand, Result>
+public class EnviarEmailCommandHandler(IOptions<EmailSettings> options) : IRequestHandler<EnviarEmailCommand>
 {
-  public async Task<Result> Handle(EnviarEmailCommand request, CancellationToken cancellationToken)
+  public async Task Handle(EnviarEmailCommand request, CancellationToken cancellationToken)
   {
-    System.Console.WriteLine(request.Nome);
-    System.Console.WriteLine(request.Email);
-    System.Console.WriteLine(request.Mensagem);
 
-    return Result.Ok();
+    var settingsSecrets = options.Value;
+
+    var email = new MimeMessage(); //cria um objeto de email 
+
+        email.From.Add( //email da pessoa que enviou pra API
+            new MailboxAddress(
+                request.Nome,
+                request.Email
+            )
+        );
+
+        email.To.Add(
+            new MailboxAddress( //Meu email pessoal que eu vai receber o email 
+                "Thiago",
+                settingsSecrets.Username
+            )
+        );
+
+      email.Subject = "Contato do Portfolio!";
+
+      email.Body = new TextPart("plain")
+        {
+          // No atributo text cria essa string para 
+
+            Text = $"""
+            Nome: {request.Nome}
+            E-mail: {request.Email}
+
+            Mensagem:
+            {request.Mensagem}
+            """
+        };
+
+        using var smtpClient = new SmtpClient();
+
+        await smtpClient.ConnectAsync(
+          settingsSecrets.Host,
+          settingsSecrets.Port,
+          MailKit.Security.SecureSocketOptions.StartTls
+        );
+      
+      await smtpClient.AuthenticateAsync(
+            settingsSecrets.Username,
+            settingsSecrets.Password
+        );
+
+        await smtpClient.SendAsync(email);
+
+        await smtpClient.DisconnectAsync(true);
+    }
   }
 
-}

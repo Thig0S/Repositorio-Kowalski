@@ -1,4 +1,5 @@
 using EmailApi.API;
+using EmailApi.API.config;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,6 +24,11 @@ builder.Services.AddCors(options =>
             .AllowAnyMethod(); //Permite que o Angular utilize qualquer método HTTP:
     });
 });
+
+//configura o email usando o usersecrets
+builder.Services.Configure<EmailSettings>(
+    builder.Configuration.GetSection("EmailSettings")
+);
 
 var app = builder.Build();
 

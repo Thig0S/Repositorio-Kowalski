@@ -10,11 +10,11 @@ public class EmailController(IMediator mediator) : ControllerBase
 {
       [HttpPost]
       public async Task<ActionResult> EnviarEmail(RequestEmailRequest request)
-    {   
-        var resultado = await mediator.Send(
+    {
+        await mediator.Send(
             new EnviarEmailCommand(request.Nome, request.Email, request.Mensagem
-            ));
-
+        ));
+        
         return Ok();
     }
 }

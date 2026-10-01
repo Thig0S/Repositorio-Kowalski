@@ -5,7 +5,7 @@ import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/
 import { provideHttpClient } from '@angular/common/http';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideBrowserGlobalErrorListeners(), provideHttpClient()], //minha aplicacao vai utilizar o httoClient
+  providers: [provideBrowserGlobalErrorListeners(), provideHttpClient()], //minha aplicacao vai utilizar o httpClient
 };
 
 //isso é como se fosse uma injeção de dependencia, com ela eu consigo usar o httpclient nos outros componentes
