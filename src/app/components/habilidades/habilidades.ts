@@ -18,52 +18,52 @@ export class Habilidades {
     {
       imagem: 'https://skillicons.dev/icons?i=cs',
       titulo: 'C#',
-      descricao: 'Desenvolvimento de aplicações orientadas a Objetos',
+      descricao: 'Development of Object-Oriented applications.',
     },
     {
       imagem: 'https://skillicons.dev/icons?i=html&theme=dark',
       titulo: 'HTML',
-      descricao: 'Estruturação semântica e acessível de páginas e aplicações web.',
+      descricao: 'Semantic and accessible structure for web pages and applications.',
     },
     {
       imagem: 'https://skillicons.dev/icons?i=scss&theme=dark',
       titulo: 'SCSS',
-      descricao: 'Criação de estilos organizados, reutilizáveis e responsivos.',
+      descricao: 'Creation of organized, reusable, and responsive styles.',
     },
     {
       imagem: 'https://skillicons.dev/icons?i=ts&theme=dark',
       titulo: 'TypeScript',
-      descricao: 'Desenvolvimento de código JavaScript tipado e mais fácil de manter.',
+      descricao: 'Development of typed JavaScript code that is easier to maintain.',
     },
     {
       imagem: 'https://skillicons.dev/icons?i=angular&theme=dark',
       titulo: 'Angular',
-      descricao: 'Construção de aplicações web escaláveis com componentes e TypeScript.',
+      descricao: 'Building scalable web applications with components and TypeScript.',
     },
     {
       imagem: 'https://skillicons.dev/icons?i=rxjs&theme=dark',
       titulo: 'RxJS',
-      descricao: 'Composição e gerenciamento de fluxos assíncronos e eventos.',
+      descricao: 'Composition and management of asynchronous streams and events.',
     },
     {
       imagem: 'https://skillicons.dev/icons?i=git&theme=dark',
       titulo: 'Git',
-      descricao: 'Versionamento de código e colaboração segura em projetos de software.',
+      descricao: 'Code version control and secure collaboration on software projects.',
     },
     {
       imagem: 'https://skillicons.dev/icons?i=docker&theme=dark',
       titulo: 'Docker',
-      descricao: 'Criação de ambientes isolados e consistentes para desenvolvimento e entrega.',
+      descricao: 'Creation of isolated and consistent environments for development and delivery.',
     },
     {
       imagem: 'https://skillicons.dev/icons?i=cypress&theme=dark',
       titulo: 'Cypress',
-      descricao: 'Automação de testes de ponta a ponta para aplicações web.',
+      descricao: 'End-to-end test automation for web applications.',
     },
     {
       imagem: 'https://skillicons.dev/icons?i=vscode&theme=dark',
       titulo: 'VS CODE',
-      descricao: 'IDE utilizada para a produção das aplicações.',
+      descricao: 'IDE used for developing and building applications.',
     },
   ];
 }

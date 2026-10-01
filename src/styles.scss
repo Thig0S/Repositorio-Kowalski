@@ -19,6 +19,9 @@ $claro: #898989;
 );
 
 @use 'bootstrap-icons';
+main {
+  overflow-x: hidden;
+}
 
 nav {
   color: $primaria;
