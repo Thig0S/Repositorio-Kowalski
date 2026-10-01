@@ -4,31 +4,36 @@
     <hr class="w-50" />
   </div>
   <div class="container mt-lg-5">
-    <form class="row my-lg-auto d-flex justify-content-between my-lg-auto">
+    <form
+      [formGroup]="formulario"
+      (ngSubmit)="enviarFormulario()"
+      class="row d-flex justify-content-between my-lg-auto"
+    >
       <div class="col col-lg-4 form-group mt-3 d-flex flex-column gap-2">
         <h3 class="display-6 m-0 fw-medium">Hey!!! 👋</h3>
         <p class="fs-5 m-0 fw-bolder p-1">
           Interested in working together or just want to get in touch? Feel free to reach out. I'd
           be happy to connect and discuss new opportunities!
         </p>
-        <label for="Name">Name</label>
-        <input type="text" class="form-control" id="Name" />
-        <label for="exampleInputEmail1">Email address</label>
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" formControlName="nome" />
+        <label for="email">Email address</label>
         <input
           type="email"
           class="form-control"
-          id="exampleInputEmail1"
+          id="email"
           aria-describedby="emailHelp"
+          formControlName="email"
         />
         <small id="emailHelp" class="form-text text-muted"
           >We'll never share your email with anyone else.</small
         >
         <label for="messagem">Message</label>
         <textarea
-          type="text"
           class="form-control h-100 d-inline-block mb-4"
           id="messagem"
           rows="5"
+          formControlName="mensagem"
         ></textarea>
         <div class="d-flex justify-content-center">
           <button
