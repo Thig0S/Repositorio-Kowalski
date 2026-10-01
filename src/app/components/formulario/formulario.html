@@ -1,33 +1,51 @@
-<section class="bg-primary p-3 d-flex flex-column max-height-30">
-  <h3 class="text-center my-1 fst-italic display-5 fw-medium">Contact Me!</h3>
-  <hr />
-  <form class="row">
-    <div class="col col-lg-4 form-group mt-3 d-flex flex-column gap-2">
-      <label for="Name">Name</label>
-      <input type="text" class="form-control" id="Name" />
-      <label for="exampleInputEmail1">Email address</label>
-      <input
-        type="email"
-        class="form-control"
-        id="exampleInputEmail1"
-        aria-describedby="emailHelp"
-      />
-      <small id="emailHelp" class="form-text text-muted"
-        >We'll never share your email with anyone else.</small
-      >
-    </div>
-    <div class="form-group d-flex flex-column gap-2 mt-1">
-      <label for="messagem">Message</label>
-      <textarea type="text" class="form-control h-100 d-inline-block mb-4" id="messagem"></textarea>
-    </div>
-    <hr />
-    <div class="d-flex justify-content-center">
-      <button
-        type="submit"
-        class="btn btn-light mt-1 d-flex align-items-center w-75 justify-content-center fs-5"
-      >
-        Send
-      </button>
-    </div>
-  </form>
+<section class="bg-primary p-3 d-flex flex-column">
+  <div class="d-flex flex-column align-items-center">
+    <h3 class="text-center my-1 fst-italic display-5 fw-medium my-lg-3">Contact Me!</h3>
+    <hr class="w-50" />
+  </div>
+  <div class="container mt-lg-5">
+    <form class="row my-lg-auto d-flex justify-content-between my-lg-auto">
+      <div class="col col-lg-4 form-group mt-3 d-flex flex-column gap-2">
+        <h3 class="display-6 m-0 fw-medium">Hey!!! 👋</h3>
+        <p class="fs-5 m-0 fw-bolder p-1">
+          Interested in working together or just want to get in touch? Feel free to reach out. I'd
+          be happy to connect and discuss new opportunities!
+        </p>
+        <label for="Name">Name</label>
+        <input type="text" class="form-control" id="Name" />
+        <label for="exampleInputEmail1">Email address</label>
+        <input
+          type="email"
+          class="form-control"
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+        />
+        <small id="emailHelp" class="form-text text-muted"
+          >We'll never share your email with anyone else.</small
+        >
+        <label for="messagem">Message</label>
+        <textarea
+          type="text"
+          class="form-control h-100 d-inline-block mb-4"
+          id="messagem"
+          rows="5"
+        ></textarea>
+        <div class="d-flex justify-content-center">
+          <button
+            type="submit"
+            class="btn btn-light mt-1 d-flex align-items-center w-75 justify-content-center fs-5"
+          >
+            Send
+          </button>
+        </div>
+      </div>
+      <div class="col col-lg-6 d-lg-flex d-none p-lg-5 align-items-center">
+        <img
+          class="img-thumbnail bg-primary border border-0 h-75"
+          src="/img/contactMe.png"
+          alt="foto do kowalski"
+        />
+      </div>
+    </form>
+  </div>
 </section>
