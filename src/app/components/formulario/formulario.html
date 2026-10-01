@@ -15,6 +15,14 @@
           Interested in working together or just want to get in touch? Feel free to reach out. I'd
           be happy to connect and discuss new opportunities!
         </p>
+        @if (mensagemSucesso) {
+          <div class="alert alert-success my-1">Message sent successfully thanks!</div>
+        }
+        @if (mensagemErro) {
+          <div class="alert alert-danger mt-3">
+            Something went wrong while sending your message.
+          </div>
+        }
         <label for="name">Name</label>
         <input type="text" class="form-control" id="name" formControlName="nome" />
         <label for="email">Email address</label>

@@ -11,6 +11,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 export class Formulario {
   public formulario!: FormGroup;
 
+  public mensagemSucesso = false;
+  public mensagemErro = false;
+
   constructor(
     private fb: FormBuilder,
     private emailService: EmailService,
@@ -33,11 +36,16 @@ export class Formulario {
     this.emailService.enviarMensagem(dados).subscribe({
       next: () => {
         console.log('Mensagem enviada com sucesso!');
+        this.mensagemSucesso = true;
+        console.log(this.mensagemSucesso);
+        this.mensagemErro = false;
         return;
       },
 
       error: (erro) => {
         console.error('Erro ao enviar mensagem:', erro);
+        this.mensagemSucesso = false;
+        this.mensagemErro = true;
         return;
       },
     });
