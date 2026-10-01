@@ -15,6 +15,6 @@ export class Navbar {
   public readonly itens: ItemNavBar[] = [
     { titulo: 'About Me', url: '#sobre', icone: 'bi-person' },
     { titulo: 'Stack', url: '#habilidades', icone: 'bi-award' },
-    { titulo: 'Projects', url: '#portfolio', icone: 'bi-card-list' },
+    { titulo: 'Projects', url: '#projetos', icone: 'bi-card-list' },
   ];
 }

@@ -42,14 +42,14 @@ export class Projetos {
       urlImagem: '',
       urlRepositorio: 'https://github.com/Os-Gadeias/Gerador-de-Certificados-Online-API',
       tecnologias: [
-        'C#',
         '.NET 10',
-        'Entity Framework',
-        'ASP.NET Core',
+        'Entity',
         'MassTransit',
         'RabbitMQ',
         'SQL Server',
         'JWT',
+        'AspNet MVC',
+        'C#',
       ],
     },
   ];
