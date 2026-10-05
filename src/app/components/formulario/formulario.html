@@ -48,7 +48,13 @@
             type="submit"
             class="btn btn-light mt-1 d-flex align-items-center w-75 justify-content-center fs-5"
           >
-            Send
+            @if (mensagemSucesso) {
+              Sent!
+            } @else if (mensagemEnviando) {
+              Sending...
+            } @else {
+              Send
+            }
           </button>
         </div>
       </div>
