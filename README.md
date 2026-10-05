@@ -10,6 +10,21 @@ To start a local development server, run:
 ng serve
 ```
 
+## Configurations for the UserSecrets
+
+```bash
+{
+  "EmailSettings": {
+    "Host": "smtp.gmail.com",
+    "Port": 000,
+    "Username": "YourEmail@gmail.com",
+    "Password": "yourPassword"
+  }
+}
+```
+
+### this has to be configured
+
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
 ## Code scaffolding
