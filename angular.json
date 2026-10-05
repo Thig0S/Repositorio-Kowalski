@@ -74,7 +74,7 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "baseHref": "https://thiagokovalski.github.io/Repositorio-Kowalski/",
+            "baseHref": "https://thig0s.github.io/Repositorio-Kowalski/",
             "name": "thig0S",
             "email": "thiagokovalski5@gmail.com"
           }
