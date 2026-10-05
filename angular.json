@@ -23,7 +23,7 @@
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "scripts": ["node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"], 
+            "scripts": ["node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"],
             "assets": [
               {
                 "glob": "**/*",
@@ -70,6 +70,14 @@
         },
         "test": {
           "builder": "@angular/build:unit-test"
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "https://thiagokovalski.github.io/portfolio/",
+            "name": "thig0S",
+            "email": "thiagokovalski5@gmail.com"
+          }
         }
       }
     }
