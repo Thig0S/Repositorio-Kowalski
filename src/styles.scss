@@ -2,11 +2,11 @@
 
 $fonte-padrao: Georgia, 'Times New Roman', serif;
 
-$primaria: #161316;
-$secundaria: #f5f6f4;
-$laranja: #b75f29;
-$marrom: #75412b;
-$claro: #898989;
+$primaria: #161925; // Shadow Grey
+$secundaria: #23395b; // Twilight Indigo
+$laranja: #406e8e; // Frozen Water (substitui o antigo destaque para elementos chamativos)
+$marrom: #8ea8c3; // Rich Cerulean (para avisos ou info)
+$claro: #9fabab; // Powder Blue (para textos secundários e elementos claros)
 
 @use 'bootstrap/scss/bootstrap' with (
   $primary: $primaria,
@@ -33,17 +33,29 @@ section {
 }
 
 .sobre-banner-text {
-  background: linear-gradient(90deg, $laranja, $marrom 90%);
+  background: linear-gradient(90deg, $secundaria, $marrom 90%);
   background-clip: text;
   color: transparent;
 }
 
 .sobre-banner-img {
-  background: linear-gradient(90deg, $primaria, $secundaria 90%);
-  height: 30rem;
-  width: 25rem;
-  border-radius: 30% 70% 75% 25% / 25% 30% 70% 75%;
-  overflow: hidden; //deixa a imagem contida dentro da div pai
+  background: linear-gradient(90deg, var(--bg-primary), var(--color-cerulean) 90%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: min(28rem, 90vw);
+  width: min(24rem, 80vw);
+  border-radius: 55% 45% 70% 40% / 45% 60% 40% 65%;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(22, 25, 37, 0.4);
+  border: 3px solid var(--color-powder); /* Borda suave destacando o formato */
+}
+
+.sobre-banner-img img {
+  width: 105%;
+  height: 105%;
+  max-width: none;
+  object-fit: cover;
 }
 
 .flex-content {

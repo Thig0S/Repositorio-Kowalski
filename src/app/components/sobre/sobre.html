@@ -1,33 +1,58 @@
-<section id="sobre" class="bg-light mt-5 mt-lg-0 p-4">
-  <div class="container my-auto">
-    <div class="row align-items-center gap-3">
+<section id="sobre" class="mt-5 mt-lg-0 p-4 bg-light">
+  <div class="container my-auto py-5">
+    <div class="row align-items-center justify-content-between gap-4 gap-lg-0">
+      <!-- Coluna de Texto -->
       <div class="col-lg-7 order-1 order-lg-0">
-        <p class="display-5 mb-1">Hello, I am <strong>Thiago Kovalski</strong></p>
-        <span class="display-4 fw-bold fst-itali sobre-banner-text">Fullstack Developer!</span>
+        <h1 class="display-5 mb-2 fw-normal text-primary">
+          Hello, I am <strong class="fw-bold">Thiago Kovalski</strong>,
+        </h1>
+        <span class="display-5 fw-bold fst-italic text-primary"> Fullstack Developer! </span>
+
         <div class="mt-4">
-          <p class="fs-5">
+          <p class="fs-5 lh-base text-primary">
             I've been studying Front-End and Back-End development for the past four years. Here,
             I'll showcase the technologies I work with and some of the projects I'm most proud of!
           </p>
         </div>
 
-        <div class="d-flex flex-column justify-content-center text-align-center">
-          <p class="fs-5"><i class="bi bi-geo-alt me-4 fs-5"></i>Lages, SC - Brasil</p>
-
-          <p class="fs-5"><i class="bi bi-envelope me-4 fs-5"></i>thiagokovalski5&#64;gmail.com</p>
+        <!-- Informações de Contato -->
+        <div class="d-flex flex-column my-4 gap-2">
+          <p class="fs-5 mb-1 text-primary">
+            <i class="bi bi-geo-alt me-3 fs-5"></i>Lages, SC - Brasil
+          </p>
+          <p class="fs-5 mb-1 text-primary">
+            <i class="bi bi-envelope me-3 fs-5"></i>thiagokovalski5&#64;gmail.com
+          </p>
         </div>
-        <span class="d-flex flex-warp gap-3">
-          <a target="_blank" href="https://github.com/Thig0S">
-            <i class="bi bi-github fs-2 text-warning"></i>
-          </a>
 
-          <a target="_blank" href="https://www.linkedin.com/in/thiago-kovalski">
-            <i class="bi bi-linkedin fs-2 text-warning"></i>
+        <!-- Redes Sociais -->
+        <div class="d-flex flex-wrap gap-3">
+          <a target="_blank" href="https://github.com/Thig0S" class="text-decoration-none">
+            <i
+              class="bi bi-github fs-2 text-primary"
+              onmouseover="this.style.opacity = '0.8'"
+              onmouseout="this.style.opacity = '1'"
+            ></i>
           </a>
-        </span>
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/thiago-kovalski"
+            class="text-decoration-none text-primary"
+          >
+            <i
+              class="bi bi-linkedin fs-2"
+              onmouseover="this.style.opacity = '0.8'"
+              onmouseout="this.style.opacity = '1'"
+            ></i>
+          </a>
+        </div>
       </div>
-      <div class="col-auto mx-auto sobre-banner-img max-vw-30">
-        <img class="img-fluid" src="img/kowalski.png" alt="foto do kowalski" />
+
+      <!-- Coluna da Imagem com o Efeito Orgânico -->
+      <div class="col-lg-4 mx-auto d-flex justify-content-center order-0 order-lg-1">
+        <div class="sobre-banner-img">
+          <img src="img/me.png" alt="foto do kowalski" />
+        </div>
       </div>
     </div>
   </div>
